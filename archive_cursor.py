@@ -20,6 +20,10 @@ class Arx_Cursor(TreeObj_Cursor):
                 else:
                     nextcommand(parameters)
     """
+    def __init__(self):
+        super().__init__()
+        self.welcome_string = self.welcome_string + ', with archive commands'
+
     def build_command_dict(self):
         temp_dict = super().build_command_dict()
         temp_dict.update({cmd_new_archive: self.new_archive})
