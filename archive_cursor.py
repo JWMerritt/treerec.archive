@@ -35,7 +35,7 @@ class Arx_Cursor(TreeObj_Cursor):
             return
         directory = retrieve(parameters, 'directory')
         filename = retrieve(parameters, 'filename')
-        append_text = retrieve(parameters, 'append_text')
+        append_text = retrieve(parameters, 'append_text', strip=False)
         new_archive(pathstr=directory, append_text=append_text, filename=filename)
     
 
